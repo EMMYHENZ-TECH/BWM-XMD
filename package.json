@@ -11,7 +11,8 @@
     "index": "pm2 start index.js --attach",
     "xmd": "pm2 start xmd.js --attach",
     "c": "tsc",
-    "start": "node index.js" 
+    "start": "node index.js",
+    "preinstall": "npx npm-force-resolutions"
   },
   "keywords": [
     "bot",
@@ -20,12 +21,16 @@
     "whatsapp",
     "whatsapp-bot",
     "Ibrahim-Adams"
-   ],
+  ],
   "author": "Ibrahim Adams",
   "license": "ISC",
   "engines": {
-    "node": "18.x",
-    "npm": ">=9.6.3"
+    "node": ">=18.0.0",
+    "npm": ">=9.6.3",
+    "yarn": ">=1.22.22"
+  },
+  "resolutions": {
+    "**/**": "latest"
   },
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
